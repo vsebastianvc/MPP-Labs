@@ -1,0 +1,7 @@
+
+The equals method in Employee has not been correctly overridden, because in its signature is receiving an Employee 
+parameter (must be Object type). So the listsAreEqual method is calling the Equals method of the Object class, producing
+an incorrect result.
+
+Solution: Change the employee type for Object type in the Equals method. Additionally, Equals method from Employee class 
+doesn’t validate null values. Doesn’t validate both objects were from the same class either.

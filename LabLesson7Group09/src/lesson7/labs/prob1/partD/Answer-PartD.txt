@@ -1,0 +1,5 @@
+They are incorrect because the removeDuplicates method uses Hashmap and when the Hascode of the object is not found, 
+the setVisited method of the Employee class changes the value of the attribute "visited" the type boolean, this makes the object can not be found 
+and finally returns false.
+
+Solution: comment the line "&& emp.visited == visited" on the method equals() in the class Employee and too the line "result += 31 * result + (visited ? 1 : 0)" on the method hasCode()

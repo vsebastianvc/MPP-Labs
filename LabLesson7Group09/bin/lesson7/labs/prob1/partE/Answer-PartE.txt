@@ -1,0 +1,2 @@
+When the type D is a class . : Solution Work , You could implements B and C and override  method and work 
+When the type D is an interface : Solution work .If B or C has default D should override it 

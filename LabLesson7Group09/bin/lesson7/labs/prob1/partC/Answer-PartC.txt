@@ -1,0 +1,5 @@
+
+Are incorrect because the method removeDuplicates use Hashmap and when call the method containsKey it calls the 
+father’s method because is not overriding the method hashCode in the class Employee.
+
+Solution: Implements the hashCode method in Employee class
