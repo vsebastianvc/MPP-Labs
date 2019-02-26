@@ -1,0 +1,5 @@
+a) ->  the compilation error happens at the line "nums.add(3.14);", because it's not possible to modify a wildcard 
+	   List, it's immutable.
+ 	   
+b) ->  the compilation error happens at the line "double dbl = sum(ints);" since the ints list is "? super Integer", 
+	   we can add new elements to it, but the sum method take the "? extends Number" wildcard as parameter.
