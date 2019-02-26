@@ -1,0 +1,10 @@
+a. What happens when the following code is executed?
+		public static void main(String[] args) {
+			IntStream ones = IntStream.generate(() -> 1).distinct();
+			ones.forEach(System.out::println);
+		}
+		
+		a/. only print 1 infinitely and non stop
+		
+	Explain. What would be a quick way to fix this?
+		a/. limit can be used to allow the program stop
