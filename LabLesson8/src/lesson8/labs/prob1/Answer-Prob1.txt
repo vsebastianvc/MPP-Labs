@@ -1,0 +1,73 @@
+Problem 1
+
+	PartA -> 1) in the functional programming the Programs are thread-safe
+			 2) in the functional programming the functions do not cause a change of state
+			 
+	PartB ->  Declarative programming is oriented to define and use methods that make only specific tasks without specify many details, 
+			  looking always for WHAT to do instead of HOW to do.
+		      Example:
+		
+			  Structured Query Language (SQL) is declarative because it only describes what should appear on a query Database without 
+			  actually describing its flow
+			  
+	PartC -> 1) Functional Interface:
+				Is an interface that only has ONE abstract method but that method should not be one declared in Object class. 
+				Also, this interface should have the annotation: @FunctionalInterface
+				Example:
+				
+				interface Comparator<T> {
+				int compare(T o1, T o2);
+				}
+
+
+			 2)Functor:
+				The implementation of a functional interface is called a functor
+
+				Example:
+				public class EmployeeNameComparator {
+				@Override
+				public int compare(Employee e1, Employee e2) {
+					return e1.name.compareTo(e2.name);
+				}
+
+
+			3) Closure:
+				A closure is a functor embedded inside another class, and it can use the state of its enclosing object
+
+				public class Main {
+
+					String attribute1 = "Class Attribute";
+
+					private void methodA(String param1) {
+					class methodAInnerClass {
+						public void innerMethod(String myParam) {
+							System.out.println("This is a test for " + myParam);// From param
+							System.out.println("This is a test for " + param1);// From first closure
+							System.out.println("This is a test for " + attribute1);// From second closure
+						}
+					}
+					new methodAInnerClass().innerMethod("InnerParam");
+				 }
+
+				 public static void main(String[] args) {
+				   	(new Main()).methodA("Params method");
+				 }
+			   }
+
+	PartD -> 1)Programs are more compact, easier to write, and easier to read/understand
+			 2)Programs are thread-safe
+			 3)Easier to demonstrate correctness of functional programs
+
+	PartE -> 1) f(x) = x + 2x^2 -> λx.x + 2x^2 (Church’s lambda notation)
+			 2) g(x,y) = y – x + xy ->   λxy.y-x+xy (Church’s lambda notation)
+			 3) h(x,y,z) = z – (x + y) -> λxyz.z-(x+y) (Church’s lambda notation)
+			 
+	PartF ->  i. Parameters: nothing
+				 Free variables: s,t
+			 ii. Parameters: u,v
+				 Free variables: a,b,x,d
+			 iii.Parameters: s,t
+				 Free variables: ignoreCase
+
+	
+	
